@@ -39,7 +39,7 @@ class ShopCart extends React.Component {
                   <CardTitle>{val.name}</CardTitle>
                   <CardSubtitle></CardSubtitle>
                 </CardBlock>
-                <CardImg width="100%" src={"/component/Card/img/"+val.img} alt="Card image cap" />
+                <CardImg width="100%" src={"component/Card/img/"+val.img} alt="Card image cap" />
                 <CardBlock>
                   <CardText>{val.description}</CardText>
                 </CardBlock>
