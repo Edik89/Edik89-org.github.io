@@ -17,6 +17,6 @@ export default gulp.task('styles', function() {
     .pipe($.if(isDevelopment, $.sourcemaps.write()))
     .pipe($.if(!isDevelopment, combine.obj($.cssnano(), $.rev())))
     .pipe(gulp.dest('public/styles'))
-    .pipe($.if(!isDevelopment, combine.obj($.rev.manifest('css.json'), gulp.dest('manifest'))))
+    .pipe($.if(!isDevelopment, combine.obj($.rev.manifest('css.json'), gulp.dest('manifest'))));
 
 });

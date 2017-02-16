@@ -9,24 +9,29 @@ const slicePath = __dirname.slice(0, -6);
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
+gulp.task('webpack', function(callback) {
   let options = {
+    context: path.resolve(slicePath, './frontend/js/'),
     entry:   {
       app: [
-        'webpack-hot-middleware/client?http://localhost:3000/__webpack_hmr&reload=true',
-        slicePath + '/frontend/js/app.jsx'
+        './app.jsx'
       ]
     },
     output:  {
-      path: '/public/js',
-      publicPath: '/js/',
-      filename: isDevelopment ? '[name].js' : '[name]-[hash:10].js'
+      filename: isDevelopment ? '[name].js' : '[name]-[hash:10].js',
+      path: path.resolve(slicePath, './public/js'),
+      publicPath: path.resolve(slicePath, './public')
     },
+
     watch:   isDevelopment,
-    devtool: isDevelopment ? 'cheap-module-inline-source-map' : 'eval',
+    devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
     module:  {
       rules: [
         {
           test: /\.(js|jsx)$/,
+          include: [
+            path.resolve(slicePath, "frontend/js")
+          ],
           exclude: /node_modules/,
           use: [
             'babel-loader'
@@ -38,6 +43,7 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
     resolve: {
       extensions: ['.js', '.jsx'],
       modules: [
+        path.resolve(slicePath, './frontend/js'),
         path.resolve(slicePath, 'node_modules')
       ]
     },
@@ -86,6 +92,36 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 
   }
 
-export default  webpack(options);
+  webpack(options, function(err, stats) {
+    if (!err) { // no hard error
+      // try to get a soft error from stats
+      err = stats.toJson().errors[0];
+    }
+
+    if (err) {
+      notifier.notify({
+        title: 'Webpack',
+        message: err
+      });
+
+      gulplog.error(err);
+    } else {
+      gulplog.info(stats.toString({
+        colors: true
+      }));
+    }
+
+    // task never errs in watch mode, it waits and recompiles
+    if (!options.watch && err) {
+      callback(err);
+    } else {
+      callback();
+    }
+
+  });
+
+});
+
+//export default  webpack(options);
 
 
