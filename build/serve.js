@@ -9,10 +9,10 @@ const slicePath = __dirname.slice(0, -6);
 
 export default gulp.task('serve', function() {
   browserSync.init({
-    server: 'public'
+    server: 'docs'
   });
 
-  browserSync.watch('public/**/*.*').on('change', browserSync.reload);
+  browserSync.watch('docs/**/*.*').on('change', browserSync.reload);
   /*browserSync({
     server: {
       baseDir: path.resolve(slicePath, './public'),

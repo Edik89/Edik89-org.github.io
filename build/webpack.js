@@ -19,8 +19,8 @@ gulp.task('webpack', function(callback) {
     },
     output:  {
       filename: isDevelopment ? '[name].js' : '[name]-[hash:10].js',
-      path: path.resolve(slicePath, './public/js'),
-      publicPath: path.resolve(slicePath, './public')
+      path: path.resolve(slicePath, './docs/js'),
+      publicPath: path.resolve(slicePath, './docs')
     },
 
     watch:   isDevelopment,

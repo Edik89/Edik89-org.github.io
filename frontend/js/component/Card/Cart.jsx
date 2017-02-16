@@ -35,7 +35,7 @@ class CardItem extends React.Component {
               <CardBlock>
                 <CardTitle>{val.name}</CardTitle>
               </CardBlock>
-              <CardImg width="100%" src={"/component/Card/img/"+val.img} alt="Card image cap" />
+              <CardImg width="100%" src={"component/Card/img/"+val.img} alt="Card image cap" />
               <CardBlock>
                 <CardText>{val.description}</CardText>
                 <Button id={val.id} onClick={this.getCardId.bind(this)} color="primary" >

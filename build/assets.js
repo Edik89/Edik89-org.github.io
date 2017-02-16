@@ -14,5 +14,5 @@ export default gulp.task('assets', function() {
       .pipe($.if(!isDevelopment, $.revReplace({
         manifest: gulp.src('manifest/webpack.json', {allowEmpty: true})
       })))
-      .pipe(gulp.dest('public'));
+      .pipe(gulp.dest('docs'));
 });

@@ -16,7 +16,7 @@ export default gulp.task('styles', function() {
     .pipe($.sass( { errLogToConsole: true, outputStyle: 'expanded' } ).on('error', $.sass.logError))
     .pipe($.if(isDevelopment, $.sourcemaps.write()))
     .pipe($.if(!isDevelopment, combine.obj($.cssnano(), $.rev())))
-    .pipe(gulp.dest('public/styles'))
+    .pipe(gulp.dest('docs/styles'))
     .pipe($.if(!isDevelopment, combine.obj($.rev.manifest('css.json'), gulp.dest('manifest'))));
 
 });
