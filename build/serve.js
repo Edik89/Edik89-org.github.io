@@ -7,28 +7,27 @@ import path from 'path';
 
 const slicePath = __dirname.slice(0, -6);
 
+const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+
+let arr = [];
+
+isDevelopment ? arr.push(webpackDevMiddleware(bundler,
+  {
+    publicPath: '/js/', stats: { colors: true }
+  }), webpackHotMiddleware(bundler))
+: null;
+
+
 export default gulp.task('serve', function() {
-  browserSync.init({
-    server: 'docs'
-  });
 
-  browserSync.watch('docs/**/*.*').on('change', browserSync.reload);
-  /*browserSync({
+  browserSync({
     server: {
-      baseDir: path.resolve(slicePath, './public'),
-      middleware: [
-        webpackDevMiddleware(bundler, {
-          publicPath: '/js',
-          stats: {
-            colors: true
-          }
-        }),
-        webpackHotMiddleware(bundler)
-      ]
-    },*/
+      baseDir: path.resolve(slicePath, './docs'),
+      middleware: [ ...arr ]
+    },
 
-    //files: ['public/**/*.html', 'public/**/*.css' ]
+     files: ['docs/**/*.html', 'docs/**/*.css' ]
 
- //});
+   });
 
 });

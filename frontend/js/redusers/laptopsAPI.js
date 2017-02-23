@@ -29,7 +29,7 @@ const initState = [
   },
 
   {
-    id:3,
+    id:4,
     name: "Ноутбук Apple MacBook Air 15 (MMGF2UA/A) ",
     img: "copy_apple1.jpg",
     price: 560,

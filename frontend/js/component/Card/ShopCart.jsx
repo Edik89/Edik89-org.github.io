@@ -4,56 +4,57 @@ import { Card, CardImg, CardText, CardBlock, CardLink,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 import { DeleteFromCart, ChangeVisible } from '../../actions/Card';
+import ImgForCart from '../common/ImgForCart';
 
-class ShopCart extends React.Component {
+const ShopCart = ({ OnRemoveFromShopCard, OnChangeVisible, GetCart }) => {
 
-  static propTypes = {
+  ShopCart.propTypes = {
     GetCart: React.PropTypes.object.isRequired,
     OnRemoveFromShopCard: React.PropTypes.func,
     OnChangeVisible: React.PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-  }
+  const items = GetCart.card;
 
-  RemoveFromShopCard(e) {
-    this.props.GetCart.card.map((val, key1) => val.map((val, key2) => {
+  const RemoveFromShopCard = (e) => {
+    items.map((val, key1) => val.map((val, key2) => {
       if(val.id == e.target.id) {
+
         let id = e.target.id;
-        this.props.OnRemoveFromShopCard(key1);
-        this.props.OnChangeVisible({ [id]: false});
+
+        OnRemoveFromShopCard(key1);
+        OnChangeVisible({ id: id, status: false });
       }
     }));
-  }
+  };
 
-  render() {
-    const items = this.props.GetCart.card;
-    if(items.length !== 0) {
-      return (
-        <div>
-          {
-            items.map((val, key) => val.map((val, key) => [
-              <Card id={"conteiner_leptop_"+val.id}>
-                <CardBlock>
-                  <CardTitle>{val.name}</CardTitle>
-                  <CardSubtitle></CardSubtitle>
-                </CardBlock>
-                <CardImg width="100%" src={"component/Card/img/"+val.img} alt="Card image cap" />
-                <CardBlock>
-                  <CardText>{val.description}</CardText>
-                </CardBlock>
-                <Button id={val.id} onClick={this.RemoveFromShopCard.bind(this)}>Delete</Button>
-              </Card>
-            ]))
-          }
-        </div>
-      );
-    } else {
-      return <div>cart is empty</div>;
+  if(items.length !== 0) {
+    return (
+      <div>
+        {
+          items.map((val, key) => val.map((val, key) => [
+            <Card id={"conteiner_leptop_"+val.id}>
+              <CardBlock>
+                <CardTitle>{val.name}</CardTitle>
+                <CardSubtitle></CardSubtitle>
+              </CardBlock>
+              <ImgForCart url={val.img}/>
+              <CardBlock>
+                <CardText>{val.description}</CardText>
+              </CardBlock>
+              <Button id={val.id} onClick={RemoveFromShopCard}>Delete</Button>
+            </Card>
+          ]))
+        }
+      </div>
+    );
+  } else {
+
+    return <div>cart is empty</div>;
+
     }
-  }
-}
+};
+
 
 export default connect(
   state => ({

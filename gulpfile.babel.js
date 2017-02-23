@@ -3,10 +3,8 @@ import styles from './build/styles';
 import clean from './build/clean';
 import assets from './build/assets';
 import serve from './build/serve';
-import webpack from './build/webpack';
 import stylesAssets from './build/stylesAssets';
-
-gulp.task('build', gulp.series('clean', gulp.parallel('stylesAssets', 'styles', 'webpack'), 'assets'));
+import build from './build/build';
 
 gulp.task('dev',
     gulp.series(

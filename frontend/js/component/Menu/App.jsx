@@ -1,25 +1,29 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-
 
 import ModalShopCart from '../Card/ModalShopCart';
 import Cart from '../Card/Cart';
 
+
 export default class Menu extends React.Component {
+
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+
     this.state = {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div className="container">

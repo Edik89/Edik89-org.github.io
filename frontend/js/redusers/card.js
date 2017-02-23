@@ -1,4 +1,4 @@
-import { CART_ADD, CART_DEL, CART_VISIBLE } from '../constants/StoreConst';
+import { CART_ADD, CART_DEL } from '../constants/StoreConst';
 
 export default function card(state=[], action) {
 
