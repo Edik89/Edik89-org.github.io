@@ -95,7 +95,7 @@ module.exports = function (env) {
         },
         sourceMap: false
       }),
-      new CleanWebpackPlugin('docs/js', {
+      new CleanWebpackPlugin('docs', {
         root: __dirname,
         verbose: true,
         dry: false
