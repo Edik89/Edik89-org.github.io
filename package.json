@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
     "build": "cross-env NODE_ENV=production webpack --env.prod=true",
-    "deploy" : "gh-pages -d docs"
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "author": "Edik Berets",
   "license": "ISC",

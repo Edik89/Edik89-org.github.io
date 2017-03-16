@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const sourcePath = path.resolve(__dirname,'./frontend');
-const staticsPath = path.resolve(__dirname, './docs');
+const staticsPath = path.resolve(__dirname, './build');
 
 module.exports = function (env) {
 
@@ -95,7 +95,7 @@ module.exports = function (env) {
         },
         sourceMap: false
       }),
-      new CleanWebpackPlugin('docs', {
+      new CleanWebpackPlugin('build', {
         root: __dirname,
         verbose: true,
         dry: false
