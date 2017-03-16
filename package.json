@@ -2,11 +2,12 @@
   "name": "shop-example",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "homepage": "https://edik89.github.io/react-redux",
   "scripts": {
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
-    "build": "cross-env NODE_ENV=production webpack --env.prod=true"
+    "build": "cross-env NODE_ENV=production webpack --env.prod=true",
+    "deploy" : "gh-pages -d docs"
   },
   "author": "Edik Berets",
   "license": "ISC",
@@ -56,6 +57,7 @@
     "eslint": "^3.15.0",
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^2.0.0",
+    "gh-pages": "^0.12.0",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
     "image-webpack-loader": "^3.2.0",
