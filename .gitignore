@@ -1,5 +1,5 @@
 node_modules
-build
+build/
 react-redux.sublime-project
 react-redux.sublime-workspace
 gulpfile.babel.js
