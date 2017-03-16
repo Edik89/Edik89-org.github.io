@@ -23,7 +23,7 @@ class App extends Component {
         <div className="container">
           <TopMenu {...this.props} />
           <div className="content">
-            <Route exact path="/" render={()=> <Cart props={newArr} {...this.props} /> } />
+            <Route exact render={()=> <Cart props={newArr} {...this.props} /> } />
             <Route path="/tablets" render={()=> <Cart props={this.props.tablets} {...this.props} /> } />
             <Route path="/laptops" render={()=> <Cart props={this.props.laptops} {...this.props} /> } />
             <Route path="/phones" render={()=> <Cart props={this.props.phones} {...this.props} /> } />
