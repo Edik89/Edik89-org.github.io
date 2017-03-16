@@ -7,7 +7,7 @@ const routes = ({ store, history }) => {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={App}/>
+        <Route component={App}/>
       </Router>
     </Provider>
   );
