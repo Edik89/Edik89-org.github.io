@@ -7,7 +7,7 @@ const imgForCart = ( props ) => {
     url: React.PropTypes.string.isRequired
   };
 
-  return <p className="fig"><CardImg  src={require(`./img/${props.url}`)} alt="Card image cap" /></p>;
+  return <p className="fig"><CardImg  src={require(`img/${props.url}`)} alt="Card image cap" /></p>;
 
 };
 
