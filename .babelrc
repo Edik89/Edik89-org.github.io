@@ -1,20 +1,21 @@
 {
 
-  "plugins": [
-    "transform-class-properties"
+  "presets": [
+    [ "es2015", { "modules": false } ],
+    "react",
+    "stage-3"
   ],
 
-  "presets": [
-    "es2015",
-    [ "es2015", { "modules": false } ],
-    "stage-3",
-    "react"
+  "plugins": [
+    "transform-class-properties",
+    "transform-es2015-template-literals",
+    "syntax-dynamic-import"
   ],
 
   "env": {
     "development": {
-      "presets": [
-        "react-hmre"
+      "plugins": [
+        "react-hot-loader/babel"
       ]
     }
   }

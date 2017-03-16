@@ -3,7 +3,8 @@ import { GET_LEPTOP } from '../constants/StoreConst';
 const initState = [
   {
     id:1,
-    name: "Ноутбук HP 250 G5 (X0Q23ES)",
+    type: "laptop",
+    name: "HP 250 G5 (X0Q23ES)",
     img: "copy_hp_1.jpg",
     price: 300,
     inventory: 10,
@@ -12,7 +13,8 @@ const initState = [
 
   {
     id:2,
-    name: "Ноутбук HP Pavilion 15-ab144ur (V4P45EA) Peachy",
+    type: "laptop",
+    name: "HP Pavilion 15-ab144ur (V4P45EA) Peachy",
     img: "hp_2.jpg",
     price: 260,
     inventory: 10,
@@ -21,7 +23,8 @@ const initState = [
 
   {
     id:3,
-    name: "Ноутбук Apple MacBook Air 13 (MMGF2UA/A) ",
+    type: "laptop",
+    name: "Apple MacBook Air 13 (MMGF2UA/A) ",
     img: "copy_apple1.jpg",
     price: 460,
     inventory: 10,
@@ -30,7 +33,8 @@ const initState = [
 
   {
     id:4,
-    name: "Ноутбук Apple MacBook Air 15 (MMGF2UA/A) ",
+    type: "laptop",
+    name: "Apple MacBook Air 15 (MMGF2UA/A) ",
     img: "copy_apple1.jpg",
     price: 560,
     inventory: 10,

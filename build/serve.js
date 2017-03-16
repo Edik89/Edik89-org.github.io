@@ -17,12 +17,11 @@ isDevelopment ? arr.push(webpackDevMiddleware(bundler,
   }), webpackHotMiddleware(bundler))
 : null;
 
-
 export default gulp.task('serve', function() {
 
   browserSync({
     server: {
-      baseDir: path.resolve(slicePath, './docs'),
+      baseDir: 'docs',
       middleware: [ ...arr ]
     },
 

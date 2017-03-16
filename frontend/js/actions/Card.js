@@ -5,11 +5,9 @@ export const AddToCart = (obj) => dispatch => {
 };
 
 export const DeleteFromCart = (obj) => dispatch => {
-
   dispatch({ type: CART_DEL, payload: obj });
 };
 
 export const ChangeVisible = (obj) => dispatch => {
-
   dispatch({ type: CART_VISIBLE, payload: obj });
 };

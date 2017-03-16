@@ -4,8 +4,6 @@ module.exports = {
       "browser": true,
       "commonjs": true,
       "es6": true,
-      "phantomjs": true,
-      "jquery":true,
       "node":true
 
     },

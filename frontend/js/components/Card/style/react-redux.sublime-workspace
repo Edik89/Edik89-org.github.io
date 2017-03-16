@@ -1,0 +1,698 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"s",
+				"scu\tReact: shouldComponentUpdate: fn(np, ns) { ... }"
+			],
+			[
+				"g",
+				"gt\tgetElementsByTagName"
+			],
+			[
+				"co",
+				"component"
+			],
+			[
+				"is",
+				"isProd"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"C",
+				"Component"
+			],
+			[
+				"lo",
+				"loadComponent"
+			],
+			[
+				"rea",
+				"reactstrap"
+			],
+			[
+				"node",
+				"node_modules"
+			],
+			[
+				"cw",
+				"cwm\tReact: componentWillMount: fn() { ... }"
+			],
+			[
+				"shop",
+				"ModalShopCart"
+			],
+			[
+				"app",
+				"app.scss"
+			],
+			[
+				"ge",
+				"get\tGet Elements"
+			],
+			[
+				"cd",
+				"cdm\tReact: componentDidMount: fn() { ... }"
+			],
+			[
+				"p",
+				"pr\tpadding-right"
+			],
+			[
+				"m",
+				"mr\tmargin-right"
+			],
+			[
+				"po",
+				"pos-f\tposition: fixed;"
+			],
+			[
+				"f",
+				"fl\tfloat: ${1:left};"
+			],
+			[
+				"i",
+				"ih\tinnerHTML"
+			],
+			[
+				"retu",
+				"returnTotalSum"
+			],
+			[
+				"get",
+				"getPrice"
+			],
+			[
+				"cl",
+				"cl\tconsole.log"
+			],
+			[
+				"cu",
+				"cur\tcursor: ${pointer};"
+			],
+			[
+				"ap",
+				"app.scss"
+			],
+			[
+				"ac",
+				"actions/"
+			],
+			[
+				"on",
+				"onAddTrack"
+			],
+			[
+				"c",
+				"cx\tReact: cx({ ... })"
+			],
+			[
+				"st",
+				"store"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"ca",
+				"callback"
+			],
+			[
+				"CL",
+				"console"
+			],
+			[
+				"file_",
+				"file_reader"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"de",
+				"decodedName"
+			],
+			[
+				"decode",
+				"decoded"
+			],
+			[
+				"if",
+				"ife\tif … else"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"moo",
+				"mongoose"
+			],
+			[
+				"d",
+				"data/"
+			],
+			[
+				"u",
+				"user.js"
+			],
+			[
+				"cs",
+				"css/"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"bg",
+				"bgc\tbackground-color: #${1:fff};"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"arr",
+				"arrItems"
+			],
+			[
+				"tea",
+				"teamAway"
+			],
+			[
+				"h",
+				"teamHome"
+			],
+			[
+				"team",
+				"teamCard"
+			],
+			[
+				"T",
+				"TableLiveGames.js"
+			],
+			[
+				"Ta",
+				"TableAllGames"
+			],
+			[
+				"_",
+				"_id"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"prev",
+				"prevProps"
+			],
+			[
+				"time",
+				"timerId"
+			],
+			[
+				"v",
+				"viws"
+			],
+			[
+				"ne",
+				"nextProps"
+			],
+			[
+				"L",
+				"LiveResultSchema.js"
+			],
+			[
+				"Li",
+				"LiveResultSchema.js"
+			],
+			[
+				"j",
+				"jqueryParsing.js"
+			],
+			[
+				"ga",
+				"gameParts"
+			],
+			[
+				"dt",
+				"document"
+			],
+			[
+				"pe",
+				"parser/"
+			],
+			[
+				"ex",
+				"extends"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"CONS",
+				"console"
+			],
+			[
+				"score",
+				"scoreData"
+			],
+			[
+				"a",
+				"al\talert"
+			],
+			[
+				"sa",
+				"sa\tsetAttribute"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"rout",
+				"router"
+			],
+			[
+				"cos",
+				"console"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"t",
+				"trim\t$.trim()"
+			],
+			[
+				"for",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"pro",
+				"process.memoryUsage();"
+			],
+			[
+				"w",
+				"width\t.width"
+			],
+			[
+				"in",
+				"inarray\t$.inArray()"
+			],
+			[
+				"e",
+				"each\t.each()"
+			],
+			[
+				"fo",
+				"for\tfor (…) {…}"
+			],
+			[
+				"hi",
+				"height\theight"
+			],
+			[
+				"sf",
+				"setTimeout(function, milliseconds);"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 342.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"Sublime",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"pcka",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 503.0
+	},
+	"console":
+	{
+		"height": 385.0,
+		"history":
+		[
+			"gulp dev",
+			"console.log(1+1)",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/eddie/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings",
+		"/home/eddie/node/GW/frontend/js/components/Card/style/ShopCart.scss",
+		"/home/eddie/node/GW/frontend/js/components/Card/style/market.sublime-project",
+		"/home/eddie/node/GW/frontend/js/components/Card/Cart.js",
+		"/home/eddie/node/GW/frontend/js/components/common/ImgForCart.js",
+		"/home/eddie/node/GW/frontend/js/components/Menu/App.js",
+		"/home/eddie/node/GW/frontend/js/redusers/laptopsAPI.js",
+		"/home/eddie/node/GW/frontend/js/components/Card/ModalShopCart.js",
+		"/home/eddie/node/GW/frontend/js/components/Menu/TopMenu.js",
+		"/home/eddie/node/GW/frontend/js/components/Card/ShopCart.js",
+		"/home/eddie/node/GW/frontend/js/actions/Card.js",
+		"/home/eddie/node/GW/frontend/js/store/configureStore.js",
+		"/home/eddie/node/GW/package.json",
+		"/home/eddie/node/GW/frontend/js/routes.js",
+		"/home/eddie/node/GW/frontend/js/index.js",
+		"/home/eddie/node/GW/webpack.config.js",
+		"/home/eddie/node/GW/frontend/js/components/common/GetPrice.js",
+		"/home/eddie/node/GW/frontend/js/containers/Root.js",
+		"/opt/sublime_text/sublime_text",
+		"/home/eddie/node/GW/frontend/js/redusers/index.js",
+		"/home/eddie/node/GW/frontend/js/app.js",
+		"/home/eddie/node/GW/frontend/js/containers/Root.jsx",
+		"/home/eddie/node/GW/frontend/js/routes.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/ModalShopCart.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/ShopCart.jsx",
+		"/home/eddie/node/GW/frontend/js/app.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Menu/App.jsx",
+		"/home/eddie/node/GW/frontend/js/component/common/GetPrice.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/Cart.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Forms/BayForm.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/style/app.scss",
+		"/home/eddie/node/GW/frontend/js/component/index.jsx",
+		"/home/eddie/node/GW/.babelrc",
+		"/home/eddie/node/GW/node_modules/reactstrap/lib/index.js",
+		"/home/eddie/node/GW/frontend/js/component/common/ImgForCart.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/MyComponent.jsx",
+		"/home/eddie/node/GW/docs/index.html",
+		"/home/eddie/node/GW/.eslintrc.js",
+		"/home/eddie/node/GW/docs/image/hp_2fe61ea3.jpg\"",
+		"/home/eddie/node/GW/docs/app.html",
+		"/home/eddie/node/GW/node_modules/weinre/web/client/Resource.js",
+		"/home/eddie/node/GW/frontend/assets/app.html",
+		"/home/eddie/node/GW/frontend/assets/index.html",
+		"/home/eddie/node/GW/docs/manifest/webpack.json",
+		"/home/eddie/node/GW/docs/styles/index.css.map",
+		"/home/eddie/node/GW/docs/js.f9c067c08598f243956761929069407f.css",
+		"/home/eddie/node/GW/build/webpack.js",
+		"/home/eddie/node/GW/build/assets.js",
+		"/home/eddie/node/GW/build/build.js",
+		"/home/eddie/node/GW/build/serve.js",
+		"/home/eddie/node/GW/gulpfile.babel.js",
+		"/home/eddie/node/GW/manifest/webpack.json",
+		"/home/eddie/node/GW/frontend/js/redusers/card.js",
+		"/home/eddie/node/GW/frontend/js/redusers/CartVisible.js",
+		"/home/eddie/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/eddie/.config/sublime-text-3/Packages/Babel/Babel.sublime-settings",
+		"/home/eddie/.config/sublime-text-3/Packages/User/Babel.sublime-settings",
+		"/home/eddie/node/GW/frontend/js/component/common/Cart.jsx",
+		"/home/eddie/node/GW/frontend/js/component/common/ShopCart.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/GetPrice.js",
+		"/home/eddie/node/GW/build/stylesAssets.js",
+		"/home/eddie/node/GW/build/styles.js",
+		"/home/eddie/node/GW/build/clean.js",
+		"/home/eddie/node/GW/.gitignore",
+		"/home/eddie/node/GW/public/index.html",
+		"/home/eddie/node/GW/build/glconf.js",
+		"/home/eddie/node/GW/frontend/js/redusers/leptop.js",
+		"/home/eddie/node/GW/frontend/js/component/forms/BayForm.jsx",
+		"/home/eddie/node/GW/frontend/js/component/app.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/CartModal.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Card/Card.jsx",
+		"/home/eddie/node/GW/frontend/js/component/Menu/Navbar.jsx",
+		"/home/eddie/node/GW/frontend/js/constants/StoreConst.js",
+		"/home/eddie/node/GW/frontend/js/actions/delCard.js",
+		"/home/eddie/node/GW/frontend/js/actions/addCard.js",
+		"/home/eddie/node/GW/frontend/js/component/Card/ShopCard.jsx",
+		"/home/eddie/node/GW/frontend/js/redusers/cardId.js",
+		"/home/eddie/node/GW/frontend/js/component/Card/ShopCart.js",
+		"/home/eddie/node/GW/frontend/js/component/track.jsx",
+		"/home/eddie/node/GW/frontend/js/actions/card.js",
+		"/home/eddie/node/GW/frontend/js/actions/tracks.js",
+		"/home/eddie/node/GW/frontend/styles/index.scss",
+		"/home/eddie/node/GW/public/styles/index.css",
+		"/home/eddie/node/GW/public/styles/js/component/Card/style/app.css",
+		"/home/eddie/node/GW/public/styles/styles/index.css",
+		"/home/eddie/node/GW/frontend/js/actions/leptops.js",
+		"/home/eddie/node/GW/frontend/js/redusers/tracks.js",
+		"/home/eddie/node/GW/frontend/js/component/Menu.js",
+		"/home/eddie/node/GW/frontend/js/component/about.js",
+		"/home/eddie/node/GW/frontend/js/redusers/playlist.js",
+		"/home/eddie/node/GW/frontend/js/redusers/findTrack.js",
+		"/home/eddie/node/GW/public/js/page.js",
+		"/home/eddie/node/GW/frontend/app.jsx",
+		"/home/eddie/node/GW/frontend/styles/page/index.scss",
+		"/home/eddie/node/GW/frontend/styles/menu/index.scss",
+		"/home/eddie/node/GW/task/styles.js",
+		"/home/eddie/node/GW/gulpfile.js",
+		"/home/eddie/node/GW/frontend/styles/menu/index.styl",
+		"/home/eddie/node/GW/frontend/styles/index.styl",
+		"/home/eddie/node/example/frontend/styles/header.scss",
+		"/home/eddie/node/example/frontend/styles/main.scss",
+		"/home/eddie/node/example/package.json",
+		"/home/eddie/node/example/public/main.css",
+		"/home/eddie/node/example/public/gulpfile.js",
+		"/home/eddie/node/example/frontend/assets/index.html",
+		"/home/eddie/node/example/frontend/style/main.scss",
+		"/home/eddie/node/example/gulpfile.js",
+		"/home/eddie/node/rest-api/src/libs/newServer.js",
+		"/home/eddie/node/rest-api/src/middleware/UsrPassport.js",
+		"/home/eddie/node/rest-api/src/middleware/OrgPassport.js",
+		"/home/eddie/node/rest-api/src/middleware/passport.js",
+		"/home/eddie/node/rest-api/src/config/config.json",
+		"/home/eddie/node/rest-api/.gitignore",
+		"/home/eddie/node/rest-api/src/middleware/error.js",
+		"/home/eddie/node/rest-api/src/middleware/updateAvatar.js",
+		"/home/eddie/node/rest-api/src/middleware/cloudinaryAPI.js",
+		"/home/eddie/node/rest-api/src/bin/dev.js",
+		"/home/eddie/node/rest-api/package.json",
+		"/home/eddie/node/rest-api/src/.babelrc",
+		"/home/eddie/node/rest-api/src/middleware/routers.js",
+		"/home/eddie/node/rest-api/src/data/models/org.js",
+		"/home/eddie/node/rest-api/src/middleware/pic/petro.jpg",
+		"/home/eddie/node/rest-api/src/data/moongoseConnect.js",
+		"/home/eddie/node/rest-api/dsd.jpg",
+		"/home/eddie/node/rest-api/clown.jpg",
+		"/home/eddie/node/rest-api/src/middleware/pic/vasya.jpg",
+		"/home/eddie/node/rest-api/vasya.jpg",
+		"/home/eddie/node/rest-api/src/middleware/pic/edik.jpg"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Card",
+			"';\n",
+			"));",
+			"middleware: [\n        webpackDevMiddleware(bundler, {\n          publicPath: '/js/',\n          stats: {\n            colors: true\n          }\n        }),\n        webpackHotMiddleware(bundler)\n      ]",
+			"params",
+			"class",
+			"\">\n",
+			"/>\n",
+			"nodemon",
+			"  \n",
+			",\n",
+			"id",
+			"swapped",
+			"signal",
+			"<signal>",
+			"swapped",
+			"qc",
+			"swapped",
+			"++)\nswapped",
+			"++)\n",
+			"path",
+			"port",
+			"ctx",
+			"0",
+			"callback",
+			"return"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 116.0
+	},
+	"pinned_build_system": "",
+	"project": "react-redux.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 335.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

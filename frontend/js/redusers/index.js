@@ -1,12 +1,19 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+import { routerReducer as routing } from 'react-router-redux';
 
-import laptop from './laptopsAPI';
+import laptops from './laptopsAPI';
+import tablets from './tabletsAPI';
+import phones from './phonesAPI';
 import card from './card';
-import CardVisible from './CartVisible';
+import cardVisible from './CartVisible';
 
-export default combineReducers({
-  laptop,
+const rootReducer = combineReducers({
+  laptops,
+  tablets,
   card,
-  CardVisible
+  phones,
+  cardVisible,
+  routing
 });
+
+export default rootReducer;

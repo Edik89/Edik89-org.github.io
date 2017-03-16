@@ -1,6 +1,4 @@
 import gulp, { $ } from './glconf';
-import path from 'path';
-import webpack from 'webpack';
 import gulplog from 'gulplog';
 import notifier from 'node-notifier';
 import AssetsPlugin from 'assets-webpack-plugin';
@@ -50,9 +48,10 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
       },
 
       plugins: [
-        new webpack.NoEmitOnErrorsPlugin(), // otherwise error still gives a file
+        new webpack.NoEmitOnErrorsPlugin(),
         new webpack.HotModuleReplacementPlugin()
       ]
+
     };
 
     if (!isDevelopment) {
@@ -91,7 +90,6 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
             }
           })
       );
-
     }
 
 export default  isDevelopment ? webpack(options)
@@ -115,7 +113,6 @@ export default  isDevelopment ? webpack(options)
         }));
       }
 
-      // task never errs in watch mode, it waits and recompiles
       if (!options.watch && err) {
         callback(err);
       } else {
@@ -126,3 +123,33 @@ export default  isDevelopment ? webpack(options)
 
   });
 
+/*export default  gulp.task('webpack', function(callback) {
+
+    webpack(options, function(err, stats) {
+      if (!err) { // no hard error
+        // try to get a soft error from stats
+        err = stats.toJson().errors[0];
+      }
+
+      if (err) {
+        notifier.notify({
+          title: 'Webpack',
+          message: err
+        });
+
+        gulplog.error(err);
+      } else {
+        gulplog.info(stats.toString({
+          colors: true
+        }));
+      }
+
+      if (!options.watch && err) {
+        callback(err);
+      } else {
+        callback();
+      }
+
+    });
+
+});*/

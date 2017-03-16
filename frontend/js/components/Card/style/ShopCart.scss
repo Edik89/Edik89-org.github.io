@@ -1,0 +1,40 @@
+button {
+  cursor: pointer;
+}
+
+.price_top {
+  color: forestgreen;
+}
+
+.shop_card_container {
+
+  img {
+    max-height: 300px;
+  }
+
+  .fig {
+    text-align: center;
+  }
+
+  .card-price {
+    color: orangered;
+    font-size: 13pt;
+    padding-bottom: 5px;
+  }
+
+  button {
+    text-transform: uppercase;
+    background-color: #bcdbec;
+    @include transition-opt(
+      $display: inline,
+      $transition-color: #c9302c,
+      $transition-speed: 1s,
+      $transition-easing: ease-in-out,
+      $delay-after: 0s,
+      $delay-before: 0s,
+      $padding: 10px
+    );
+    @include fill-closing-horizontal;
+  }
+
+}

@@ -1,0 +1,66 @@
+.container {
+
+  .price_top {
+    float: left;
+    margin-right: 15px;
+    color: forestgreen;
+    font-size: x-large;
+  }
+
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .navbar {
+
+    .top_link {
+      font-size: x-large;
+
+      a:first-child {
+       color: black;
+       text-decoration: none;
+       margin-right: 15px;
+      }
+
+      a:nth-child(1n+2) {
+        color: rgba(0, 0, 0, 0.65);
+        @include transition-opt(
+          $hover-color: cadetblue,
+          $display: inline,
+          $transition-color: #329cde,
+          $transition-speed: 0.5s,
+          $transition-easing: ease-in-out,
+          $delay-after: 0s,
+          $delay-before: 0s,
+          $padding: 10px
+        );
+
+        @include underline-left;
+
+      };
+
+    }
+
+  }
+
+}
+
+#shopCart {
+  position: fixed;
+  top: 0; right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+
+  button {
+    color: #3a0833;
+    background-color: rgba(9, 177, 230, 0.77);
+    @include transition-opt;
+    @include fill-bottom-left;
+  }
+
+}
+
+.bottom {
+  margin-top: 350px;
+}
