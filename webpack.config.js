@@ -13,7 +13,7 @@ module.exports = function (env) {
   const isProd = nodeEnv === 'production';
 
   let entry = {
-    index: ['babel-regenerator-runtime', './js/index'],
+    index: ['./js/index'],
     modalShopCart:'./js/components/Card/ModalShopCart',
     vendor: ['react', 'react-dom', 'react-redux', 'react-router-dom', 'redux-thunk', 'react-router-redux', 'redux',
     'reactstrap']
@@ -104,7 +104,6 @@ module.exports = function (env) {
   } else {
     entry = {
       index: [
-        'babel-regenerator-runtime',
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
         'react-hot-loader/patch',
