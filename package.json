@@ -34,6 +34,7 @@
     "babel-preset-es2015-webpack": "^6.4.3",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-3": "^6.22.0",
+    "chunk-manifest-webpack-plugin": "^1.0.0",
     "clean-webpack-plugin": "^0.1.15",
     "cross-env": "^3.1.4",
     "css-loader": "^0.26.1",
@@ -53,6 +54,7 @@
     "sass-resources-loader": "^1.2.0",
     "style-loader": "^0.13.1",
     "uglify-js": "github:mishoo/UglifyJS2#harmony",
+    "webpack-chunk-hash": "^0.4.0",
     "webpack-dev-server": "^2.3.0",
     "webpack-module-hot-accept": "^1.0.4"
   }

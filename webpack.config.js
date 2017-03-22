@@ -3,6 +3,8 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ChunkManifestPlugin = require("chunk-manifest-webpack-plugin");
+const WebpackChunkHash = require("webpack-chunk-hash");
 
 const sourcePath = path.resolve(__dirname,'./frontend');
 const staticsPath = path.resolve(__dirname, './build');
@@ -12,53 +14,31 @@ module.exports = function (env) {
   const nodeEnv = env && env.prod ? 'production' : 'development';
   const isProd = nodeEnv === 'production';
 
-  let entry = {
-    index: ['./js/index'],
-    modalShopCart:'./js/components/Card/ModalShopCart',
-    vendor: ['react', 'react-dom', 'react-redux', 'react-router-dom', 'redux-thunk', 'react-router-redux', 'redux',
-    'reactstrap']
-  };
-
   const plugins = [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity,
-      filename: 'js/vendor.bundle.js'
+      name: ['vendor', 'manifest'],
+      minChunks: Infinity
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: nodeEnv,
     }),
-    new webpack.NamedModulesPlugin(),
+    new WebpackChunkHash(),
+    new ChunkManifestPlugin({
+      filename: "manifest.json",
+      manifestVariable: "webpackManifest"
+    }),
     new HtmlWebpackPlugin({
-      template: __dirname + '/frontend/assets/index.html',
+      template: __dirname + '/frontend/assets/index.html.js',
       filename: 'index.html',
-      excludeChunks:['modalShopCart'],
       inject: 'body'
-    })
-  ];
+    }),
+    new ExtractTextPlugin({
+      filename: isProd ? 'styles/[name].[contenthash].css' : 'styles/[name].css',
+      allChunks: true,
+      disable: !isProd
+    }),
 
-  let AddStyle = ExtractTextPlugin.extract({
-    fallback: "style-loader",
-    use: [
-      {
-        loader: "css-loader",
-      },
-      {
-        loader:'sass-loader',
-        query: {
-          outputStyle: 'compressed'
-        }
-      },
-      {
-        loader: 'sass-resources-loader',
-        options: {
-          resources: [
-            sourcePath + '/js/components/common/style/mixin/*.scss',
-          ]
-        }
-      }
-    ]
-  });
+  ];
 
 
   if (isProd) {
@@ -72,10 +52,7 @@ module.exports = function (env) {
           NODE_ENV: JSON.stringify('production')
         }
       }),
-      new ExtractTextPlugin({
-        filename: "styles/[name].[contenthash:10].css",
-        allChunks: true
-      }),
+      new webpack.HashedModuleIdsPlugin(),
       //new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
@@ -101,44 +78,33 @@ module.exports = function (env) {
         dry: false
       })
     );
+
   } else {
-    entry = {
-      index: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
-        'react-hot-loader/patch',
-        './js/index'
-      ],
-      modalShopCart:'./js/components/Card/ModalShopCart',
-      vendor: ['react', 'react-dom', 'react-redux', 'react-router-dom', 'redux-thunk', 'react-router-redux', 'redux', 'reactstrap']
-    },
+
     plugins.push(
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NamedModulesPlugin()
     );
-    AddStyle = [
-      'style-loader',
-      'css-loader',
-      'sass-loader',
-      {
-        loader: 'sass-resources-loader',
-        options: {
-          resources: [
-            sourcePath + '/js/components/common/style/mixin/*.scss',
-          ]
-        }
-      }
-    ];
   }
 
   return {
-
     devtool: isProd ? 'cheap-module-source-map' : 'eval',
     context: sourcePath,
-    entry,
+    entry: {
+      index: isProd ? './js/index' : [
+          'webpack-dev-server/client?http://localhost:3000',
+          'webpack/hot/only-dev-server',
+          'react-hot-loader/patch',
+          './js/index'
+      ],
+      vendor: ['react', 'react-dom', 'react-redux', 'react-router-dom', 'redux-thunk', 'react-router-redux', 'redux',
+      'reactstrap']
+    },
     output: {
-      filename: 'js/[name].bundle.js',
       path: staticsPath,
-      publicPath: '/'
+      publicPath: '/',
+      filename: isProd ? 'js/[name].[chunkhash].js' : 'js/[name].js',
+      chunkFilename: isProd ? 'js/[name].[chunkhash].js' : 'js/[name].js',
     },
     module: {
       rules: [
@@ -152,7 +118,28 @@ module.exports = function (env) {
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          use: AddStyle
+          use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: "css-loader",
+              },
+              {
+                loader:'sass-loader',
+                query: {
+                  outputStyle: 'compressed'
+                }
+              },
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  resources: [
+                    sourcePath + '/js/components/common/style/mixin/*.scss',
+                  ]
+                }
+              }
+            ]
+          })
         },
         {
           test: /\.(js|jsx)$/,
@@ -164,7 +151,7 @@ module.exports = function (env) {
         {
           test: /\.(jpg|png|gif|svg)$/i,
           use: [
-            'file-loader?name=image/[name][hash:7].[ext]',
+           'file-loader?name=image/[name].[hash:7].[ext]',
             {
               loader: 'image-webpack-loader',
               query: {

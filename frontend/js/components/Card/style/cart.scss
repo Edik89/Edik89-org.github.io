@@ -57,7 +57,7 @@
         }
 
         button {
-          color: darkgreen;;
+          color: darkgreen;
           @include transition-opt(
             $hover-color: #2C3E50,
             $transition-color: darkgreen
